@@ -3,7 +3,9 @@
 
     Nesse classe é usada Dependency Inversion que ao invés de escritor depender
     de caneta ou maquina, ele depende do modelo que elas usam que é a classe abstrata
-    ferramenta
+    ferramenta.
+
+    é realizado uma associação já que não é obrigatorio ter uma ferramenta
 */
 export class Writter {
   private _tool: Tool | null = null;
