@@ -3,7 +3,7 @@
 type CallBackFunction<U> = (value: U, index?: number, array?: U[]) => boolean;
 
 export function myFilter<T>(array: T[], callbackfn: CallBackFunction<T>): T[] {
-  const myFilteredArray = [];
+  const myFilteredArray: T[] = [];
 
   for (let i = 0; i < array.length; i++) {
     if (callbackfn(array[i])) {
