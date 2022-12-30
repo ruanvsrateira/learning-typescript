@@ -3,6 +3,7 @@ export class SerVivo {
 }
 
 /* Definindo uma classe filha para ser vivo, que é o ser humano que possui atributo extra que é nome */
+@decorator
 export class SerHumano extends SerVivo {
   constructor(respira: boolean, idade: number, public nome: string) {
     super(respira, idade);
@@ -25,8 +26,6 @@ function decorator<T extends new (...args: any[]) => any>(target: T): T {
   };
 }
 
-const decoratorSerVivo = decorator(SerHumano);
+const serHumano = new SerHumano(true, 30, "ruan");
 
-const serhumano = new decoratorSerVivo(true, 12, "RUan");
-
-console.log(serhumano);
+console.log(serHumano);
